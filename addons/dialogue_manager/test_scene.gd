@@ -5,8 +5,8 @@ const DialogueSettings = preload("./settings.gd")
 const DialogueResource = preload("./dialogue_resource.gd")
 
 
-@onready var title: String = DialogueSettings.get_user_value("run_title")
-@onready var resource: DialogueResource = load(DialogueSettings.get_user_value("run_resource_path"))
+@onready var title: String = "start" # DialogueSettings.get_user_value("run_title")
+@onready var resource: DialogueResource = preload("res://test_dialogue.dialogue") # load(DialogueSettings.get_user_value("run_resource_path"))
 
 
 func _ready():

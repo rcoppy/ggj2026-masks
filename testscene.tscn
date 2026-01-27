@@ -1,0 +1,23 @@
+[gd_scene load_steps=2 format=3 uid="uid://envhyox1w8ne"]
+
+[ext_resource type="PackedScene" uid="uid://d2hbxqhvgj3xg" path="res://BlenderTest/testscene.glb" id="1_jotil"]
+
+[node name="testscene" instance=ExtResource("1_jotil")]
+
+[node name="Player" parent="." index="4"]
+cast_shadow = 2
+
+[node name="Plane_002" parent="." index="5"]
+cast_shadow = 2
+
+[node name="Plane_008" parent="." index="11"]
+cast_shadow = 0
+
+[node name="Plane_010" parent="." index="13"]
+cast_shadow = 0
+
+[node name="Plane_011" parent="." index="14"]
+cast_shadow = 0
+
+[node name="Plane_013" parent="." index="16"]
+cast_shadow = 0
