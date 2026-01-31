@@ -1,0 +1,12 @@
+[gd_scene load_steps=4 format=3 uid="uid://dbelkmvmqmaq2"]
+
+[ext_resource type="PackedScene" uid="uid://dpt120c42si65" path="res://productionassets/3DProps_backgrounds/Bush.fbx" id="1_t558g"]
+[ext_resource type="Texture2D" uid="uid://ddd15ushsr1b5" path="res://productionassets/3DProps_backgrounds/BushText.png" id="2_3ge1l"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_pfuqw"]
+albedo_texture = ExtResource("2_3ge1l")
+
+[node name="Bush" instance=ExtResource("1_t558g")]
+
+[node name="Vert_004" parent="." index="0"]
+surface_material_override/0 = SubResource("StandardMaterial3D_pfuqw")

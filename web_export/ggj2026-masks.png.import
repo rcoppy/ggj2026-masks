@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://de1heb5ufha77"
-path="res://.godot/imported/ggj2026-masks.png-b5fbf16084432ff558471d31fc6c32f4.ctex"
+path="res://.godot/imported/ggj2026-masks.png-3ced437c47805c260d40c9b082814645.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://web export/ggj2026-masks.png"
-dest_files=["res://.godot/imported/ggj2026-masks.png-b5fbf16084432ff558471d31fc6c32f4.ctex"]
+source_file="res://web_export/ggj2026-masks.png"
+dest_files=["res://.godot/imported/ggj2026-masks.png-3ced437c47805c260d40c9b082814645.ctex"]
 
 [params]
 
