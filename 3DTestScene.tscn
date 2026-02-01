@@ -1,4 +1,4 @@
-[gd_scene load_steps=100 format=4 uid="uid://j1agc5k612lx"]
+[gd_scene load_steps=101 format=4 uid="uid://j1agc5k612lx"]
 
 [ext_resource type="PackedScene" uid="uid://envhyox1w8ne" path="res://testscene.tscn" id="2_vmg8u"]
 [ext_resource type="Texture2D" uid="uid://repusrapthyo" path="res://BlenderTest/testscene_IMG_0406.jpg" id="2_wfbtw"]
@@ -34,10 +34,11 @@
 [ext_resource type="Texture2D" uid="uid://ciiwf7tlmyenf" path="res://productionassets/3DProps_backgrounds/char_music.png" id="32_fsm28"]
 [ext_resource type="Texture2D" uid="uid://bwhx16cnu4feb" path="res://productionassets/3DProps_backgrounds/char_boy.png" id="33_d5buq"]
 [ext_resource type="Texture2D" uid="uid://cu1ngku0bg4h1" path="res://productionassets/3DProps_backgrounds/char_dogone.png" id="34_4qhkb"]
+[ext_resource type="PackedScene" uid="uid://dqvgi4uh323lk" path="res://productionassets/3DProps_backgrounds/girl.glb" id="34_fsm28"]
 [ext_resource type="Texture2D" uid="uid://cuwdv5kr24eds" path="res://productionassets/3DProps_backgrounds/char_dogtwo.png" id="35_l2jm8"]
 [ext_resource type="Texture2D" uid="uid://jh3yja08uxpt" path="res://productionassets/3DProps_backgrounds/torch.png" id="36_kbwam"]
-[ext_resource type="Shader" uid="uid://mp4vg6ppsot6" path="res://fire.gdshader" id="37_g1ywo"]
-[ext_resource type="Shader" uid="uid://sekhh20jr4m6" path="res://smoke.gdshader" id="38_dyyh0"]
+[ext_resource type="Shader" uid="uid://mp4vg6ppsot6" path="res://productionassets/fire.gdshader" id="37_g1ywo"]
+[ext_resource type="Shader" uid="uid://sekhh20jr4m6" path="res://productionassets/smoke.gdshader" id="38_dyyh0"]
 [ext_resource type="Texture2D" uid="uid://c1qi6g1ngoo8r" path="res://productionassets/3DProps_backgrounds/mask.png" id="39_ohb1h"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_vmg8u"]
@@ -1038,6 +1039,9 @@ frame_progress = 0.80505985
 
 [node name="owl2" parent="Characters" instance=ExtResource("21_rwct1")]
 transform = Transform3D(0.34891817, 0.010882923, -7.0721884, 6.8922024, 0.0030672306, 0.3400427, 0.0035890539, -6.9061995, -0.0104504125, 23.342928, -9.4846525, -1.1291921)
+
+[node name="girl" parent="Characters" instance=ExtResource("34_fsm28")]
+transform = Transform3D(-0.38564968, 0.005835781, 3.7773101, -3.6811764, 0.0016449055, -0.3758374, -0.002215849, -3.7033231, 0.0054952437, 0.39736986, -9.370851, 0.24680042)
 
 [node name="Props" type="Node3D" parent="."]
 
