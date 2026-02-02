@@ -15,7 +15,7 @@ compatibility/default_parent_skeleton_in_mesh_instance_3d=true
 [application]
 
 config/name="ggj2026-masks"
-run/main_scene="uid://j1agc5k612lx"
+run/main_scene="uid://f8qlrbidtoqf"
 config/features=PackedStringArray("4.5", "GL Compatibility")
 config/icon="res://icon.svg"
 

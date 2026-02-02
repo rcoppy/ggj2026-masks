@@ -1,0 +1,105 @@
+[gd_scene load_steps=20 format=3 uid="uid://da16ekrbgsfac"]
+
+[ext_resource type="Script" uid="uid://dtxn2wp5fptmt" path="res://player_sprite_manager.gd" id="1_606se"]
+[ext_resource type="Texture2D" uid="uid://c5nco1vt7rlw8" path="res://productionassets/2Danimations/boy/5boywolf.png" id="1_bwjto"]
+[ext_resource type="Script" uid="uid://bqygbtjfab3dt" path="res://movement/movement.gd" id="1_u1c27"]
+[ext_resource type="Texture2D" uid="uid://clcjps4wxehhj" path="res://productionassets/2Danimations/boy/6boywolf.png" id="2_606se"]
+[ext_resource type="Texture2D" uid="uid://dq3opfajuysd0" path="res://productionassets/2Danimations/boy/2boywolf.png" id="3_u1c27"]
+[ext_resource type="Texture2D" uid="uid://bvaewj1dcs65a" path="res://productionassets/2Danimations/boy/1boywolf.png" id="4_op7ga"]
+[ext_resource type="Texture2D" uid="uid://dyraeykufls27" path="res://productionassets/2Danimations/boy/4boywolf.png" id="5_q13i1"]
+[ext_resource type="Texture2D" uid="uid://cd2uuulos4t7o" path="res://productionassets/2Danimations/boy/3boywolf.png" id="6_pylmc"]
+[ext_resource type="Texture2D" uid="uid://dev2go7d2yfqd" path="res://productionassets/2Danimations/boy/7boywolf.png" id="7_pbfsw"]
+[ext_resource type="Texture2D" uid="uid://d08nij6mtylxs" path="res://productionassets/2Danimations/wolf/1wolf.png" id="8_5tmop"]
+[ext_resource type="Texture2D" uid="uid://b7xhnoaht2nyf" path="res://productionassets/2Danimations/wolf/5wolf.png" id="9_7ahtn"]
+[ext_resource type="Texture2D" uid="uid://byapbhctr0h0j" path="res://productionassets/2Danimations/wolf/2wolf.png" id="10_7lmhl"]
+[ext_resource type="Texture2D" uid="uid://bvet0ebagoh1b" path="res://productionassets/2Danimations/wolf/7wolf.png" id="11_dx0e4"]
+[ext_resource type="Texture2D" uid="uid://bu87l2huqdvvb" path="res://productionassets/2Danimations/wolf/6wolf.png" id="12_jm5j8"]
+[ext_resource type="Texture2D" uid="uid://btnlropvmo8sx" path="res://productionassets/2Danimations/wolf/4wolf.png" id="13_7hik5"]
+[ext_resource type="Texture2D" uid="uid://o5ipa5vik42g" path="res://productionassets/2Danimations/wolf/3wolf.png" id="14_qtqh7"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_c70kd"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_bwjto")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_606se")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_u1c27")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_op7ga")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_q13i1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_pylmc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_pbfsw")
+}],
+"loop": true,
+"name": &"run",
+"speed": 6.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_t8i7a"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("8_5tmop")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_7ahtn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_7lmhl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_dx0e4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_jm5j8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_7hik5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_qtqh7")
+}],
+"loop": true,
+"name": &"default",
+"speed": 6.0
+}]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_606se"]
+radius = 1.0048828
+height = 2.0097656
+
+[node name="Player" type="CharacterBody3D"]
+script = ExtResource("1_u1c27")
+travel_speed = 12
+
+[node name="SpriteManager" type="Node3D" parent="."]
+script = ExtResource("1_606se")
+
+[node name="boywolf" type="AnimatedSprite3D" parent="SpriteManager"]
+visible = false
+gi_mode = 2
+sprite_frames = SubResource("SpriteFrames_c70kd")
+animation = &"run"
+frame_progress = 0.75089157
+
+[node name="wolf" type="AnimatedSprite3D" parent="SpriteManager"]
+gi_mode = 2
+sprite_frames = SubResource("SpriteFrames_t8i7a")
+frame_progress = 0.80505985
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1.555, 0, 0, 0, 1.555, 0, 0, 0, 1.555, -0.38215488, -0.018205564, 0)
+shape = SubResource("CapsuleShape3D_606se")
+
+[connection signal="moving" from="." to="SpriteManager" method="_on_player_moving"]
